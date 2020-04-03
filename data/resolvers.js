@@ -6,13 +6,13 @@ export const resolvers = {
     Query: {
         getFriend: ({ id }) => {
             return new Friend(id, friendDatabase[id]);
-        }
+        },
     },
     Mutation: {
         createFriend: (root, { input }) => {
             const newFriend = new Friends({
                 firstName: input.firstName,
-                lastName: input.lasttName,
+                lastName: input.lastName,
                 gender: input.gender,
                 age: input.age,
                 language: input.language,
@@ -24,12 +24,10 @@ export const resolvers = {
 
             return new Promise((resolve, object) => {
                 newFriend.save((err) => {
-                    if (err) {
-                        reject(err)
-                    }
+                    if (err) reject(err)
                     else resolve(newFriend)
                 })
             })
         },
     },
-}
+};

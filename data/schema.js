@@ -48,7 +48,7 @@ const typeDefs = `
 
     input ContactInput {
         firstName: String
-        lastName: String
+        lastName: String 
     }
 
     type Mutation {
@@ -56,6 +56,6 @@ const typeDefs = `
     }
 `;
 
-const schema = makeExecutableSchema({ typeDefs, resolvers })
+const schema = makeExecutableSchema({ typeDefs, resolvers });
 
 export { schema };
