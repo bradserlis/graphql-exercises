@@ -1,1 +1,4 @@
 aliens.sqlite
+node_modules
+.env
+.DS_Store
